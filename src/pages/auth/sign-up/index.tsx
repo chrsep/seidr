@@ -5,17 +5,13 @@ import Logo from "$public/logo.ico"
 import TextField from "$components/text-field"
 import Link from "next/link"
 import AuthLayout from "$layouts/auth-layout"
-import useSignUp from "$hooks/use-sign-up"
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/router"
 import Spinner from "$components/spinner"
 import ErrorBox from "$components/error-box"
-import { useTitle } from "hoofd"
 
 const SignUp = () => {
-  useTitle("Sign Up")
   const router = useRouter()
-  const { trigger: signUp, error } = useSignUp()
 
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -26,15 +22,15 @@ const SignUp = () => {
     e.preventDefault()
     setLoading(true)
     try {
-      const signUpRes = await signUp({
-        password,
-        email,
-        name,
-      })
-      if (signUpRes?.status !== 201) {
-        setLoading(false)
-        return
-      }
+      // const signUpRes = await signUp({
+      //   password,
+      //   email,
+      //   name,
+      // })
+      // if (signUpRes?.status !== 201) {
+      //   setLoading(false)
+      //   return
+      // }
 
       await signIn("credentials", {
         redirect: false,
@@ -119,7 +115,7 @@ const SignUp = () => {
               </Button>
             </div>
 
-            <ErrorBox errorText={error?.data.message} />
+            {/*<ErrorBox errorText={error?.data.message} />*/}
           </form>
         </div>
       </div>
