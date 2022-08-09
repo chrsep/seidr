@@ -4,7 +4,7 @@ import {
   FC,
   ReactElement,
   useEffect,
-  useState,
+  useState
 } from "react"
 import { useRouter } from "next/router"
 import Link from "next/link"
@@ -45,21 +45,12 @@ const ActiveLink: FC<{
         setClassName(newClassName)
       }
     }
-  }, [
-    asPath,
-    isReady,
-    props.as,
-    props.href,
-    childClassName,
-    activeClassName,
-    setClassName,
-    className,
-  ])
+  }, [asPath, isReady, props.as, props.href, childClassName, activeClassName, setClassName, className, exact])
 
   return (
     <Link {...props}>
       {cloneElement(child, {
-        className: className || null,
+        className: className || null
       })}
     </Link>
   )
