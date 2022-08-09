@@ -46,4 +46,4 @@ next-env.d.ts
 .pnp.*
 
 # don't commit env
-.env
+.env.local
