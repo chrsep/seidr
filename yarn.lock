@@ -244,6 +244,59 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prefresh/babel-plugin@npm:0.4.3":
+  version: 0.4.3
+  resolution: "@prefresh/babel-plugin@npm:0.4.3"
+  checksum: 0bd68589b1491da7b5c4920a9958b74fbdf75f54c12b5713e1c708e4a21df7f47f9d265d8ee291bdc03c3c4fcd12bd97b34835b565292c0a69a5858ff37e556c
+  languageName: node
+  linkType: hard
+
+"@prefresh/core@npm:^1.3.3":
+  version: 1.3.4
+  resolution: "@prefresh/core@npm:1.3.4"
+  peerDependencies:
+    preact: ^10.0.0
+  checksum: 545cc3e678bf0669e5726ac4da5b5f95ae7f1ce20e850a2a824e662e1fae11422d9681b5cc253b07c1ebe09a8c42c4b2247a45afecc81014b799eb1a8d7447a0
+  languageName: node
+  linkType: hard
+
+"@prefresh/next@npm:^1.4.6":
+  version: 1.5.2
+  resolution: "@prefresh/next@npm:1.5.2"
+  dependencies:
+    "@prefresh/babel-plugin": 0.4.3
+    "@prefresh/core": ^1.3.3
+    "@prefresh/utils": ^1.1.2
+    "@prefresh/webpack": ^3.3.3
+  peerDependencies:
+    next: ^9.4.0 || ^10.0.0 || ^11.0.0 || ^12.0.0
+    preact: ^10.4.0
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: b4ecf3654db4723cb17f12cd09c796b180782eec02f3e5f6c2665b0f3429cb89d769e84ed968620ba8cfe394400e82700c73570d4aba6a4b2bbf3c5a0438cdcf
+  languageName: node
+  linkType: hard
+
+"@prefresh/utils@npm:^1.1.2":
+  version: 1.1.3
+  resolution: "@prefresh/utils@npm:1.1.3"
+  checksum: a95b816d08a68f499489f1e0098effcda99ccba06c80986cb0dfbcda4fc9c8f8e3238603ead4ee35bb9fb7985de66b1a785d12c64fbc61600e0a8bd388fc2de0
+  languageName: node
+  linkType: hard
+
+"@prefresh/webpack@npm:^3.3.0, @prefresh/webpack@npm:^3.3.3":
+  version: 3.3.4
+  resolution: "@prefresh/webpack@npm:3.3.4"
+  dependencies:
+    "@prefresh/core": ^1.3.3
+    "@prefresh/utils": ^1.1.2
+  peerDependencies:
+    "@prefresh/babel-plugin": ^0.4.0
+    preact: ^10.4.0
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 49d2184856f7c3335d339b3cff52c85b9524c6b215c120f701bfc7053781adea8db8908f158a756a9234af09acedff101fd087f4adcda367b38ca6403a9e5442
+  languageName: node
+  linkType: hard
+
 "@prisma/client@npm:^4.2.0":
   version: 4.2.0
   resolution: "@prisma/client@npm:4.2.0"
@@ -2199,7 +2252,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -2380,6 +2433,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"module-alias@npm:^2.0.0":
+  version: 2.2.2
+  resolution: "module-alias@npm:2.2.2"
+  checksum: 4b5543f834b484033e5bd184096ca8276b9195e32e88883ee6ea8d3a4789d97c470d26f5fa7271bd7a26588bf67e4d27dbdb594ee327aef1c9619d855dc78342
+  languageName: node
+  linkType: hard
+
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -2448,7 +2508,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:12.2.4":
+"next-plugin-preact@npm:^3.0.7":
+  version: 3.0.7
+  resolution: "next-plugin-preact@npm:3.0.7"
+  dependencies:
+    "@prefresh/next": ^1.4.6
+    "@prefresh/webpack": ^3.3.0
+    module-alias: ^2.0.0
+  peerDependencies:
+    preact: ">=10"
+    preact-render-to-string: ">=5"
+    preact-ssr-prepass: ">=1"
+  checksum: f272e851483794b92ec6b757a19e17dd13df7eb6156b562fd7071f7f1e9a59127e0f78b07245d91ab580ce36cc3c7a695f81cb383a52345d98bb995f7ae1d9f8
+  languageName: node
+  linkType: hard
+
+"next@npm:^12.2.4":
   version: 12.2.4
   resolution: "next@npm:12.2.4"
   dependencies:
@@ -2936,7 +3011,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact-render-to-string@npm:^5.1.19":
+"preact-render-to-string@npm:^5.1.19, preact-render-to-string@npm:^5.2.1":
   version: 5.2.1
   resolution: "preact-render-to-string@npm:5.2.1"
   dependencies:
@@ -2947,7 +3022,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact@npm:^10.6.3":
+"preact@npm:^10.10.1, preact@npm:^10.6.3":
   version: 10.10.1
   resolution: "preact@npm:10.10.1"
   checksum: a79a196770064eb4d5a533e5b407f5eb842e47ea143bd4687e436ad3faf634efd4fda1185fab7b8c687a0889f1dea61349f1a01d6d6dfe1db3e0f4361f65c1d3
@@ -3038,15 +3113,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:18.2.0":
-  version: 18.2.0
-  resolution: "react-dom@npm:18.2.0"
-  dependencies:
-    loose-envify: ^1.1.0
-    scheduler: ^0.23.0
+"react-dom@npm:@preact/compat@17.1.1, react@npm:@preact/compat@17.1.1":
+  version: 17.1.1
+  resolution: "@preact/compat@npm:17.1.1"
   peerDependencies:
-    react: ^18.2.0
-  checksum: 7d323310bea3a91be2965f9468d552f201b1c27891e45ddc2d6b8f717680c95a75ae0bc1e3f5cf41472446a2589a75aed4483aee8169287909fcd59ad149e8cc
+    preact: "*"
+  checksum: 4171731dee6f25bdb8a200117c7d5b75527d79080aa864482e6b50a74e08b0fd24329aa7d97feb1c3e1b4aa9cbcc8a8b5e25ac01bab0fdf4d67843a53bda0eab
   languageName: node
   linkType: hard
 
@@ -3057,12 +3129,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.2.0":
-  version: 18.2.0
-  resolution: "react@npm:18.2.0"
-  dependencies:
-    loose-envify: ^1.1.0
-  checksum: 88e38092da8839b830cda6feef2e8505dec8ace60579e46aa5490fc3dc9bba0bd50336507dc166f43e3afc1c42939c09fe33b25fae889d6f402721dcd78fca1b
+"react-ssr-prepass@npm:preact-ssr-prepass@1.2.0":
+  version: 1.2.0
+  resolution: "preact-ssr-prepass@npm:1.2.0"
+  peerDependencies:
+    preact: ">=10 || ^10.0.0-beta.0 || ^10.0.0-alpha.0"
+  checksum: 5c27122cb5e0838d25ffc8be4e63641c9ce7637a9e210d32852be609bee74cb68f79601089270b08812e45f779f81a316fb8a7e6ebb27a3b1493b17c36df41f6
   languageName: node
   linkType: hard
 
@@ -3227,15 +3299,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.23.0":
-  version: 0.23.0
-  resolution: "scheduler@npm:0.23.0"
-  dependencies:
-    loose-envify: ^1.1.0
-  checksum: d79192eeaa12abef860c195ea45d37cbf2bbf5f66e3c4dcd16f54a7da53b17788a70d109ee3d3dde1a0fd50e6a8fc171f4300356c5aee4fc0171de526bf35f8a
-  languageName: node
-  linkType: hard
-
 "seidr@workspace:.":
   version: 0.0.0-use.local
   resolution: "seidr@workspace:."
@@ -3252,13 +3315,18 @@ __metadata:
     clsx: ^1.2.1
     eslint: 8.21.0
     eslint-config-next: 12.2.4
-    next: 12.2.4
+    next: ^12.2.4
     next-auth: ^4.10.3
+    next-plugin-preact: ^3.0.7
     postcss: ^8.4.16
+    preact: ^10.10.1
+    preact-render-to-string: ^5.2.1
     prettier: ^2.7.1
     prisma: ^4.2.0
-    react: 18.2.0
-    react-dom: 18.2.0
+    react: "npm:@preact/compat@17.1.1"
+    react-dom: "npm:@preact/compat@17.1.1"
+    react-ssr-prepass: "npm:preact-ssr-prepass@1.2.0"
+    swr: beta
     tailwindcss: ^3.1.8
     typescript: 4.7.4
   languageName: unknown
@@ -3487,6 +3555,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"swr@npm:beta":
+  version: 2.0.0-beta.6
+  resolution: "swr@npm:2.0.0-beta.6"
+  dependencies:
+    use-sync-external-store: ^1.1.0
+  peerDependencies:
+    react: ^16.11.0 || ^17.0.0 || ^18.0.0
+  checksum: a2fa5b4600e84351970636e50dfa5209e65caf279a076a64fab8cbd4fb39407d4bee4c93577579ae95ea61161fb3ae176197a23d56770d1b85d6718d31877e05
+  languageName: node
+  linkType: hard
+
 "tailwindcss@npm:^3.1.8":
   version: 3.1.8
   resolution: "tailwindcss@npm:3.1.8"
@@ -3678,7 +3757,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:1.2.0":
+"use-sync-external-store@npm:1.2.0, use-sync-external-store@npm:^1.1.0":
   version: 1.2.0
   resolution: "use-sync-external-store@npm:1.2.0"
   peerDependencies:
