@@ -5,6 +5,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
+    images: {
+      allowFutureImages: true
+    },
     browsersListForSwc: true,
     legacyBrowsers: false
   }
